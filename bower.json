@@ -1,0 +1,22 @@
+{
+  "name": "imProgress",
+  "version": "0.0.1",
+  "authors": [
+    "Ian Murray <me@ianmurray.me>"
+  ],
+  "description": "An Angular wrapper of NProgress.js",
+  "main": [
+    "angular-im-progress.js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "nprogress": "~0.2.0"
+  }
+}
