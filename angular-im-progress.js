@@ -19,11 +19,13 @@ angular
       NProgress.configure(config);
     };
 
-    this.$get = [function () {
+    this.$get = ['$timeout', function ($timeout) {
       var count = 0;
+      var timeout;
 
       return {
         start: function () {
+          $timeout.cancel(timeout);
           count++;
 
           NProgress.start();
@@ -32,7 +34,9 @@ angular
           count = Math.max(0, --count);
 
           if (count === 0) {
-            NProgress.done();
+            timeout = $timeout(function () {
+              NProgress.done();
+            }, 300);
           }
           else {
             NProgress.inc(0.1);
