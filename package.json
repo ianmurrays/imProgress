@@ -1,0 +1,25 @@
+{
+  "name": "angular-im-progress",
+  "version": "0.1.0",
+  "description": "An Angular wrapper of NProgress.js",
+  "main": "angular-im-progress.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianmurrays/imProgress.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "Ian Murray <me@ianmurray.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianmurrays/imProgress/issues"
+  },
+  "homepage": "https://github.com/ianmurrays/imProgress#readme",
+  "dependencies": {
+    "nprogress": "^0.2.0"
+  }
+}
