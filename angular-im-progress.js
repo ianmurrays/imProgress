@@ -48,17 +48,23 @@ angular
   .factory('imProgressInterceptor', function ($q, imProgress) {
     return {
       request: function (config) {
-        imProgress.start();
+        if (!config.ignoreLoadingBar) {
+          imProgress.start();
+        }
 
         return config;
       },
       response: function (response) {
-        imProgress.done();
+        if (!response.config.ignoreLoadingBar) {
+          imProgress.done();
+        }
 
         return response;
       },
       responseError: function (response) {
-        imProgress.done();
+        if (!response.config.ignoreLoadingBar) {
+          imProgress.done();
+        }
 
         return $q.reject(response);
       }
